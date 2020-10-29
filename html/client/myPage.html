@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Page</title>
+</head>
+<body>
+  <header>
+    My Page
+  </header>
+  <section>
+    <form  action="index.html" method="post">
+      <!-- 라디오버튼을 숨기고 탭의 형식으로 -->
+      <div class="radios">
+        <label><input type="radio" name="rb_modify" value="mod_nickname" id="mod_nickname"> 닉네임 변경</label>
+        <label><input type="radio" name="rb_modify" value="mod_pw" id="mod_pw"> 비밀번호 변경</label>
+        <label><input type="radio" name="rb_modify" value="mod_list" id="mod_list"> 단어장 리스트 편집</label>
+      </div>
+
+      <!-- 선택된 라디오버튼에 따라 보이는 div가 다르도록 -->
+      <div id="div_nickname_modify">
+        <label>변경할 닉네임: <input type="text" id="newNick" value="기존 닉넴"></label>
+      </div>
+      <div id="div_pw_modify">
+        <table>
+          <tr>
+            <td>현재 비밀번호</td>
+            <td><input type="password" id="oldPW"><td>
+          </tr>
+          <tr>
+            <td>새 비밀번호</td>
+            <td><input type="password" id="newPW"></td>
+          </tr>
+          <tr>
+            <td>비밀번호 확인</td>
+            <td><input type="password" id="newPW_equal"></td>
+          </tr>
+        </table>
+      </div>
+      <div id="div_vocalist_modify">
+        vocalist 편집
+      </div>
+      <button type="submit">저장</button>
+    </form>
+  </section>
+</body>
+</html>
