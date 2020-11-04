@@ -1,0 +1,114 @@
+
+/* 전체적인 틀 셋팅*********************************/
+html, body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+/* 헤더 부분 세팅*********************************/
+header {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  line-height: 10vh;
+  background-color: #add8e6;
+  max-width: 1000px;
+}
+
+#div_logo {
+  flex: 1;
+}
+#logo {
+  max-width: 200px;
+  height: auto;
+}
+#header_btns {
+  flex: 3;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  padding-right: 5vw;
+}
+
+
+/* 섹션 부분 세팅*********************************/
+section {
+  margin-top: 10vh;
+  background-color: #89FF82;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro {
+  font-size: 30px;
+  text-align: left;
+  font-family: "휴먼편지체";
+}
+.intro p{
+  margin: 15px;
+}
+#intro1 {
+  padding-right: 15vw;
+}
+
+
+/* 버튼 세팅*********************************/
+.btns {
+  padding: 5px 20px;
+  font-size: 20px;
+  border-radius: 20px;
+  border-style: none;
+  background-color: #4c8bf5;
+  color: white;
+  font-family: "Ink Free", "휴먼편지체";
+}
+#login, #myPage {
+  font-size: 13px;
+  padding: 5px 10px;
+}
+#skip {
+  margin-left: 8vw;
+}
+#sign_up {
+  margin-left: 32vw;
+}
+.section3_btns {
+  padding-left: 30vw;
+}
+
+/* 내비게이션 세팅*********************************/
+nav {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0px;
+  right: 0px;
+  width: 17vw;
+  height: 100%;
+}
+.nav_list {
+  flex: 1;
+}
+#go_trans {
+  border-radius: 0;
+}

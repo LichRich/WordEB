@@ -4,24 +4,30 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../../css/common.css">
   <title>단어장 이름</title>
 </head>
 <body>
-  <header>
-    단어장 이름. 클릭하면 바꿀 수 있게.
-  </header>
-  <section>
-    <div class="left">
-      <textarea name="new_voca" rows="8" cols="80"></textarea>
-      <br>
-      <button class="btns" type="button" name="add_voca" id="add_voca">새 단어 추가</button>
-    </div>
-    <div class="right">
-      list 형태로 DB내의 단어-뜻 불러오기
-    </div>
-  </section>
-  <footer>
-    <button class="btns" type="button" name="voca_test" id="voca_test">Test</button>
-  </footer>
+
+  <div class="container">
+
+    <header>
+      단어장 이름. 클릭하면 바꿀 수 있게.
+    </header>
+    <section>
+      <div class="left">
+        <textarea name="new_voca" rows="8" cols="80" style="resize:none;"></textarea>
+        <br>
+        <button class="btns" type="button" name="add_voca" id="add_voca">새 단어 추가</button>
+      </div>
+      <div class="right">
+        list 형태로 DB내의 단어-뜻 불러오기
+      </div>
+    </section>
+    <footer>
+      <button class="btns" type="button" name="voca_test" id="voca_test">Test</button>
+    </footer>
+
+  </div>
 </body>
 </html>
