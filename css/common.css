@@ -7,13 +7,15 @@ html, body {
   width: 100%;
   height: 100%;
 }
-
 .container {
   display: inline-block;
   width: 100%;
   height: 100%;
   margin: 0 auto;
   max-width: 1000px;
+}
+body::-webkit-scrollbar {
+  display:none;
 }
 
 /* 헤더 부분 세팅*********************************/
@@ -27,14 +29,22 @@ header {
   line-height: 10vh;
   background-color: #add8e6;
   max-width: 1000px;
+  z-index: 100;
 }
 
 #div_logo {
   flex: 1;
+  opacity: 1;
+  animation: fadeIn .5s steps(60, end);
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 #logo {
   max-width: 200px;
   height: auto;
+  cursor: pointer;
 }
 #header_btns {
   flex: 3;
@@ -62,7 +72,10 @@ section {
 .intro {
   font-size: 30px;
   text-align: left;
-  font-family: "휴먼편지체";
+  font-family: "-윤고딕330";
+  opacity: 0;
+  animation: fadeIn .5s forwards;
+  animation-delay: .5s;
 }
 .intro p{
   margin: 15px;
@@ -75,25 +88,25 @@ section {
 /* 버튼 세팅*********************************/
 .btns {
   padding: 5px 20px;
-  font-size: 20px;
   border-radius: 20px;
-  border-style: none;
+  border: 2px solid #4c8bf5;
   background-color: #4c8bf5;
   color: white;
-  font-family: "Ink Free", "휴먼편지체";
+  font: bold 20px "Ink Free", "-윤고딕320";
+  cursor: pointer;
 }
 #login, #myPage {
   font-size: 13px;
   padding: 5px 10px;
 }
-#skip {
-  margin-left: 8vw;
+#skip, #sign_up, .section3_btns {
+  float: right;
 }
-#sign_up {
-  margin-left: 32vw;
-}
-.section3_btns {
-  padding-left: 30vw;
+.btns:hover {
+  background-color: white;
+  border: 2px solid white;
+  color: #4c8bf5;
+  transition: background .3s ease, color .3s ease, border-color .3s ease;
 }
 
 /* 내비게이션 세팅*********************************/
@@ -102,12 +115,77 @@ nav {
   display: flex;
   flex-direction: column;
   top: 0px;
-  right: 0px;
-  width: 17vw;
+  right: -18vw;
+  width: 18vw;
   height: 100%;
+  background-color: white;
+  overflow: hidden;
+  -webkit-transition: right .3s ease;
+  -moz-transition: right .3s ease;
+  transition: right .3s ease;
+}
+#cb_nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+#cb_nav + label {
+  position: fixed;
+  top: 10vh;
+  right: 0;
+  width: 30px;
+  display: block;
+  margin: 0 auto;
+  padding: 10px 0;
+  cursor: pointer;
+  -webkit-transition: right .3s ease;
+  -moz-transition: right .3s ease;
+  transition: right .3s ease;
+}
+#cb_nav + label #div_nav, #cb_nav + label::before, #cb_nav + label::after {
+  content: '';
+  width: 25px;
+  height: 4px;
+  display: block;
+  margin: 3px auto;
+  border-radius: 3px;
+  background-color: #000000;
+  -webkit-transition: right .3s ease;
+  -moz-transition: right .3s ease;
+  transition: all .3s ease-in-out;
+}
+#cb_nav:checked + label {
+  transition: right .3s ease;
+  right: 18vw;
+}
+#cb_nav:checked + label::before {
+  -webkit-transform: translateY(7px) rotate(135deg);
+  -moz-transform: translateY(7px) rotate(135deg);
+  -ms-transform: translateY(7px) rotate(135deg);
+  -o-transform: translateY(7px) rotate(135deg);
+  transform: translateY(7px) rotate(135deg);
+}
+#cb_nav:checked + label::after {
+  -webkit-transform: translateY(-7px) rotate(-135deg);
+  -moz-transform: translateY(-7px) rotate(-135deg);
+  -ms-transform: translateY(-7px) rotate(-135deg);
+  -o-transform: translateY(-7px) rotate(-135deg);
+  transform: translateY(-7px) rotate(-135deg);
+}
+#cb_nav:checked + label #div_nav {
+  transition: background-color .3s ease;
+  background-color: inherit;
+}
+#cb_nav:checked + label + nav {
+  -webkit-transition: right .3s ease;
+  -moz-transition: right .3s ease;
+  transition: right .3s ease;
+  right: 0;
 }
 .nav_list {
   flex: 1;
+  font: bold 20px "Ink Free", "-윤고딕320";
 }
 #go_trans {
   border-radius: 0;

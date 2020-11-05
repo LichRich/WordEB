@@ -27,38 +27,41 @@
         <div class="intro" id="intro1">
           <p>환영합니다!</p>
           <p>간단하게 사용법을 알아볼까요?</p>
+          <button class="btns" id="skip">skip!</button>
         </div>
-        <button class="btns" id="skip">skip!</button>
       </div>
       <div class="sections" id="section2">
         <div class="intro">
           <p>먼저, 나만의 단어장을 위해 회원가입을 해주세요!</p>
           <p>이메일 인증을 통한 간단한 회원가입!</p>
+          <button class="btns" id="sign_up">회원가입 하러가기</button>
         </div>
-        <button class="btns" id="sign_up">회원가입 하러가기!</button>
       </div>
       <div class="sections" id="section3">
         <div class="intro">
           <p>회원가입을 마쳤다면, 로그인해주세요!</p>
           <p>로그인이 되었다면 이제, 본격적으로 사용방법을 알아볼까요?</p>
-        </div>
-        <div class="section3_btns">
-          <button class="btns" id="go_voca_intro">단어장 설명보기</button>
-          <button class="btns" id="go_trans_intro">번역기 설명보기</button>
+          <div class="section3_btns">
+            <button class="btns" id="go_voca_intro">단어장 설명보기</button>
+            <button class="btns" id="go_trans_intro">번역기 설명보기</button>
+          </div>
         </div>
       </div>
     </section>
 
   </div>
 
+  <input type="checkbox" id="cb_nav">
+  <label for="cb_nav"><div id="div_nav"></div></label>
+
   <nav>
     <div class="nav_list">
-      vocabularies list <br>
-      width = 0이었다가 checkbox == checked 일 경우 trans: width=100px;
-      맨하단에 button go to trans
+      vocabularies list
     </div>
     <button class="btns" id="go_trans">go to translater</button>
   </nav>
+
+  <script src="../js/common.js"></script>
 
 </body>
 </html>

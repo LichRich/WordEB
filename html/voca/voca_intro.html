@@ -12,8 +12,8 @@
   <div class="container">
 
     <header>
-      <div id="logo">
-        ImageLOGO
+      <div id="div_logo">
+        <img src="../../logo.png" alt="noLogo" id="logo">
       </div>
 
       <!-- 로그인, 마이페이지 버튼은 상황에 맞게 하나씩만 나오게끔! -->
@@ -42,21 +42,23 @@
         <div class="intro">
           <p>단어장에 있는 단어들을 활용해 테스트를 볼 수 있어요!</p>
           <p>자, 이제 나만의 단어장을 만들어볼까요?</p>
-        </div>
-        <div class="section3_btns">
-          <button class="btns" id="go_voca">단어장 만들기</button>
-          <button class="btns" id="go_trans_intro">번역기 설명보기</button>
+          <div class="section3_btns">
+            <button class="btns" id="go_voca">단어장 만들기</button>
+            <button class="btns" id="go_trans_intro">번역기 설명보기</button>
+          </div>
         </div>
       </div>
 
     </section>
 
   </div>
+
+  <input type="checkbox" id="cb_nav">
+  <label for="cb_nav"><div id="div_nav"></div></label>
+
   <nav>
     <div class="nav_list">
-      vocabularies list <br>
-      width = 0이었다가 checkbox == checked 일 경우 trans: width=100px;
-      맨하단에 button go to trans
+      vocabularies list
     </div>
     <button class="btns" id="go_trans">go to translater</button>
   </nav>

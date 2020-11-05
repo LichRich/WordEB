@@ -10,8 +10,8 @@
 <body>
   <div class="container">
     <header>
-      <div id="logo">
-        ImageLOGO
+      <div id="div_logo">
+        <img src="../../logo.png" alt="noLogo" id="logo">
       </div>
 
       <!-- 로그인, 마이페이지 버튼은 상황에 맞게 하나씩만 나오게끔! -->
@@ -39,10 +39,10 @@
         <div class="intro">
           <p>설명은 이게 끝이에요 간단하죠?</p>
           <p>자, 남은 건 직접 사용해 보는 것 뿐이에요!</p>
-        </div>
-        <div class="section3_btns">
-          <button class="btns" id="go_voca_intro">단어장 설명 보기</button>
-          <button class="btns" id="go_translation">번역하러 가기</button>
+          <div class="section3_btns">
+            <button class="btns" id="go_voca_intro">단어장 설명 보기</button>
+            <button class="btns" id="go_translation">번역하러 가기</button>
+          </div>
         </div>
       </div>
 
@@ -50,11 +50,12 @@
 
   </div>
 
+  <input type="checkbox" id="cb_nav">
+  <label for="cb_nav"><div id="div_nav"></div></label>
+
   <nav>
     <div class="nav_list">
-      vocabularies list <br>
-      width = 0이었다가 checkbox == checked 일 경우 trans: width=100px;
-      맨하단에 button go to trans
+      vocabularies list
     </div>
     <button class="btns" id="go_trans">go to translater</button>
   </nav>
