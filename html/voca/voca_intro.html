@@ -5,11 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/full-page-scroll.css">
+  <style media="screen">
+    section {
+      background-color: #89FF82;
+    }
+  </style>
   <title>voca_intro</title>
 </head>
 <body>
 
-  <div class="container">
+  <div class="container" id="container">
 
     <header>
       <div id="div_logo">
@@ -23,22 +29,22 @@
       </div>
     </header>
 
-    <section>
+    <div id="main" class="scroll-container">
 
-      <div class="sections" id="section1">
+      <section class="sections" id="section1">
         <div class="intro">
           <p>단어를 추가할 때는 '단어-뜻'의 형식으로 써요!</p>
           <p>뜻이 여러개일 때는 ','로 구분!</p>
           <p>입력예시: Mean-의미하다,평균</p>
         </div>
-      </div>
-      <div class="sections" id="section2">
+      </section>
+      <section class="sections" id="section2">
         <div class="intro">
           <p>나만의 단어장은 단어장 추가 버튼을 이용해 여러개를 만들 수 있어요!</p>
           <p>대충 단어장 추가하는 짤</p>
         </div>
-      </div>
-      <div class="sections" id="section3">
+      </section>
+      <section class="sections" id="section3">
         <div class="intro">
           <p>단어장에 있는 단어들을 활용해 테스트를 볼 수 있어요!</p>
           <p>자, 이제 나만의 단어장을 만들어볼까요?</p>
@@ -47,9 +53,9 @@
             <button class="btns" id="go_trans_intro">번역기 설명보기</button>
           </div>
         </div>
-      </div>
+      </section>
 
-    </section>
+    </div>
 
   </div>
 
@@ -62,5 +68,18 @@
     </div>
     <button class="btns" id="go_trans">go to translater</button>
   </nav>
+
+  <script src="../../js/common.js"></script>
+  <script src="../../js/full-page-scroll.js"></script>
+  <script type="text/javascript">
+  new fullScroll({
+    mainElement: "main",
+    displayDots: true,
+    dotsPosition: "left",
+    animateTime: 0.7,
+    animateFunction: "ease",
+  });
+  </script>
+
 </body>
 </html>

@@ -5,10 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/full-page-scroll.css">
+  <style media="screen">
+    section {
+      background-color: #89FF82;
+    }
+  </style>
   <title>index</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="container">
 
     <header>
       <div id="div_logo">
@@ -22,22 +28,22 @@
       </div>
     </header>
 
-    <section>
-      <div class="sections" id="section1">
+    <div id="main" class="scroll-container">
+      <section class="sections" id="section1">
         <div class="intro" id="intro1">
           <p>환영합니다!</p>
           <p>간단하게 사용법을 알아볼까요?</p>
           <button class="btns" id="skip">skip!</button>
         </div>
-      </div>
-      <div class="sections" id="section2">
+      </section>
+      <section class="sections" id="section2">
         <div class="intro">
           <p>먼저, 나만의 단어장을 위해 회원가입을 해주세요!</p>
           <p>이메일 인증을 통한 간단한 회원가입!</p>
           <button class="btns" id="sign_up">회원가입 하러가기</button>
         </div>
-      </div>
-      <div class="sections" id="section3">
+      </section>
+      <section class="sections" id="section3">
         <div class="intro">
           <p>회원가입을 마쳤다면, 로그인해주세요!</p>
           <p>로그인이 되었다면 이제, 본격적으로 사용방법을 알아볼까요?</p>
@@ -46,8 +52,8 @@
             <button class="btns" id="go_trans_intro">번역기 설명보기</button>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
   </div>
 
@@ -62,6 +68,17 @@
   </nav>
 
   <script src="../js/common.js"></script>
+  <script src="../js/index.js"></script>
+  <script src="../js/full-page-scroll.js"></script>
+  <script type="text/javascript">
+  new fullScroll({
+    mainElement: "main",
+    displayDots: true,
+    dotsPosition: "left",
+    animateTime: 0.7,
+    animateFunction: "ease",
+  });
+  </script>
 
 </body>
 </html>

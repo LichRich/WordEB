@@ -5,10 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/full-page-scroll.css">
+  <style media="screen">
+    section {
+      background-color: #89FF82;
+    }
+  </style>
   <title>trnas_intro</title>
 </head>
 <body>
-  <div class="container">
+  <div class="container" id="container">
     <header>
       <div id="div_logo">
         <img src="../../logo.png" alt="noLogo" id="logo">
@@ -21,21 +27,21 @@
       </div>
     </header>
 
-    <section>
+    <div id="main" class="scroll-container">
 
-      <div class="sections" id="section1">
+      <section class="sections" id="section1">
         <div class="intro">
           <p>Papago와 Google 번역을 동시에 볼 수 있어요!</p>
           <p>원하는 문장을 넣은 후, translation을 누르면 끝!</p>
         </div>
-      </div>
-      <div class="sections" id="section2">
+      </section>
+      <section class="sections" id="section2">
         <div class="intro">
           <p>원하지 않는 줄 바꿈으로 인해 해석이 잘 되지 않는 경우,</p>
           <p>Remove Enter 버튼을 이용해 줄 바꿈을 제거할 수 있어요!</p>
         </div>
-      </div>
-      <div class="sections" id="section3">
+      </section>
+      <section class="sections" id="section3">
         <div class="intro">
           <p>설명은 이게 끝이에요 간단하죠?</p>
           <p>자, 남은 건 직접 사용해 보는 것 뿐이에요!</p>
@@ -44,9 +50,9 @@
             <button class="btns" id="go_translation">번역하러 가기</button>
           </div>
         </div>
-      </div>
+      </section>
 
-    </section>
+    </div>
 
   </div>
 
@@ -59,5 +65,18 @@
     </div>
     <button class="btns" id="go_trans">go to translater</button>
   </nav>
+
+  <script src="../../js/common.js"></script>
+  <script src="../../js/full-page-scroll.js"></script>
+  <script type="text/javascript">
+  new fullScroll({
+    mainElement: "main",
+    displayDots: true,
+    dotsPosition: "left",
+    animateTime: 0.7,
+    animateFunction: "ease",
+  });
+  </script>
+
 </body>
 </html>
