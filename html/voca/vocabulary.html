@@ -5,29 +5,51 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/vocabulary.css">
   <title>단어장 이름</title>
+  <style>
+    body {
+      background-color: #89FF82;
+    }
+  </style>
 </head>
 <body>
 
   <div class="container">
 
     <header>
-      단어장 이름. 클릭하면 바꿀 수 있게.
+      <div id="div_logo">
+        <img src="../../logo.png" alt="noLogo" id="logo">
+      </div>
+      <div id="div_title">Custom Vocabulary</div>
+      <div id="div_right"></div>
     </header>
-    <section>
+
+    <section id="section_vocabulary" class="sections">
       <div class="left">
-        <textarea name="new_voca" rows="8" cols="80" style="resize:none;"></textarea>
+        <textarea id="txt_newVoca" name="new_voca" rows="8"  style="resize:none;"></textarea>
         <br>
         <button class="btns" type="button" name="add_voca" id="add_voca">새 단어 추가</button>
       </div>
       <div class="right">
-        list 형태로 DB내의 단어-뜻 불러오기
+        <ul>
+          <li>
+            <table>
+              <tr>
+                <th>단어</th>
+                <th>의미</th>
+              </tr>
+            </table>
+          </li>
+        </ul>
       </div>
     </section>
     <footer>
-      <button class="btns" type="button" name="voca_test" id="voca_test">Test</button>
+      <div class="footer_go" id="test">TEST</div>
     </footer>
 
   </div>
+
+  <script src="../../js/vocabulary.js"></script>
 </body>
 </html>

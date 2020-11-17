@@ -5,7 +5,11 @@ use \Statickidz\GoogleTranslate;
 
 $source = 'en';
 $target = 'ko';
-$text = $_POST['output'];
+if ($_POST['output'] !== ""){
+  $text = $_POST['output'];
+} else {
+  $text = $_POST['input'];
+}
 
 $trans = new GoogleTranslate();
 $result = $trans->translate($source, $target, $text);

@@ -5,23 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../../css/common.css">
+  <link rel="stylesheet" href="../../css/voca_list.css">
   <title>My Vocabularies</title>
+  <style media="screen">
+    body {
+      background-color: #89FF82;
+    }
+  </style>
 </head>
 <body>
 
   <div class="container">
+
     <header>
-      내 단어장
-      <a href="voca_intro.html" style="height:30px;"><img src="q_mark.png" alt="noImage" style="width:30px; height:30px;"></a>
+      <div id="div_logo">
+        <img src="../../logo.png" alt="noLogo" id="logo">
+      </div>
+      <div id="div_title">My Vocabularies</div>
+      <div id="div_right">
+        <a href="voca_intro.html" style="height:30px;">
+          <img id="go_voca_intro" src="q_mark.png" alt="noImage" style="width:30px; height:30px;">
+        </a>
+      </div>
     </header>
 
     <section class="sections">
-      <a href="vocabulary.html">list 형태로 DB 내의 단어장 목록 불러오기.</a>
-      <img src="plus.png" alt="noImage" style="width:30px; height:30px;">
+      <!-- list 형태로 DB 내의 단어장 목록 불러오기. -->
+
+      <a href="vocabulary.html">
+        <img id="btn_add_voca" src="plus.png" alt="noImage" style="width:30px; height:30px;">
+      </a>
+
     </section>
 
-    <footer><button id="test_all">종합테스트</button></footer>
+    <footer><div class="footer_go" id="test_all">종합 테스트</div></footer>
+
   </div>
+
+  <script src="../../js/voca_list.js"></script>
 
 </body>
 </html>

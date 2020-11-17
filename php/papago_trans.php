@@ -1,5 +1,9 @@
 <?php
-  $trans_txt = $_POST['output'];
+  if ($_POST['output'] !== ""){
+    $trans_txt = $_POST['output'];
+  } else {
+    $trans_txt = $_POST['input'];
+  }
   $client_id = "92466qC3Lh9L2w8a7lSd";
   $client_secret = "1WQeS3v2oA";
   $encText = urlencode($trans_txt);

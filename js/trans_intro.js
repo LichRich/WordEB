@@ -1,8 +1,33 @@
+/*
+ *
+ * header
+ *
+ */
+var logo = document.getElementById('logo');
+logo.onclick = function() {
+    location.href = "../index.html";
+}
+
+/*
+ *
+ * section
+ *
+ */
 var btn_voca_intro = document.getElementById('go_voca_intro');
 btn_voca_intro.onclick = function() {
-  location.href = "file:///C:Users/leech/Desktop/program/study/WordEB/html/voca/voca_intro.html";
+  location.href = "../voca/voca_intro.html";
 }
-var go_trans = document.getElementById('go_translation');
+var go_translation = document.getElementById('go_translation');
+go_translation.onclick = function() {
+  location.href = "translation.html";
+}
+
+/*
+ *
+ * nav
+ *
+ */
+var go_trans = document.getElementById('go_trans');
 go_trans.onclick = function() {
-  location.href = "file:///C:Users/leech/Desktop/program/study/WordEB/html/trans/translation.html";
+  location.href = "translation.html";
 }

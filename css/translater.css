@@ -1,9 +1,10 @@
 html, body{
-  text-align: center;
-  width:100%;
-  height:100%;
-  overflow: hidden;
   margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
 body{
   display: flex;
@@ -13,25 +14,38 @@ form{
   display: flex;
   margin: 0;
   padding: 0;
+  opacity: 0;
+  animation: fadeIn .5s forwards;
+  animation-delay: .5s;
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
-/*                                                                              TITLE */
-#title{
+/* 헤더 부분 세팅*********************************/
+header{
   position: fixed;
-  width: 100vw;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   height: 6vh;
-  font-size: 20px;
-  z-index: 100;
   line-height: 6vh;
+  font-size: 25px;
   font-family: "Copperplate Gothic Light";
   font-weight: bold;
   font-variant: small-caps;
-  border-bottom: 1px solid black;
-  background: white;
+  background-color: #add8e6;
+  animation: fadeIn .5s steps(60, end);
+  z-index: 100;
+}
+#logo {
+  max-width: 150px;
+  height: auto;
+  cursor: pointer;
 }
 
-/**
-                                                                                NOT API*/
+/* notAPI 부분 세팅*********************************/
 #notAPI{
   display: flex;
   flex-direction: column;
@@ -51,7 +65,7 @@ form{
 }
 
 
-/*                                                                              BUTTONS */
+/* 버튼 세팅*********************************/
 .middle{
   position: relative;
   display: flex;
@@ -66,6 +80,7 @@ form{
   border: 2px solid black;
   background-color: white;
   font-size: 0.75rem;
+  font-weight: bold;
   color: black;
   width: 10vw;
   height: 5vh;
@@ -75,26 +90,30 @@ form{
 #remove:hover{
   color:white;
   background: #FF4848;
-  border-color: white;
+  border-color: #89FF82;
+  cursor: pointer;
 }
 #copy:hover{
   color:white;
-  background: #89FF82;
-  border-color: white;
+  background: #19ce60;
+  border-color: #89FF82;
+  cursor: pointer;
 }
 #reset:hover{
   color:white;
   background: #4848FF;
-  border-color: white;
+  border-color: #89FF82;
+  cursor: pointer;
 }
 #trans:hover{
   color: white;
   background: black;
-  border-color: white;
+  border-color: #89FF82;
+  cursor: pointer;
 }
 
 
-/*                                                                              API */
+/* API 부분 세팅*********************************/
 #API{
   display: flex;
   flex-direction: column;
@@ -112,7 +131,7 @@ form{
   border: 2px solid black;
 }
 
-label{
+.trans_labels {
   width: 47.5vw;
   border: 2px solid black;
   border-radius: 10px 10px 0 0;
@@ -139,7 +158,7 @@ label{
 }
 
 
-/*                                                                              COMMON */
+/* 공통 세팅*********************************/
 
 .high, .low {
   display: flex;
@@ -160,9 +179,14 @@ textarea {
 
 #input,.btn,#output,#res_papago, #res_google {
   resize:none;
-  font-family: "Times New Roman";
+  font-family: "Ink Free", "-윤고딕320";
 }
 
 ::placeholder{
   text-align: center;
+}
+
+/* 내비게이션 세팅*********************************/
+#cb_nav + label {
+  top: 0;
 }

@@ -3,10 +3,15 @@ window.onload = function(){
   window.focus();
   window.moveTo(0,0);
   window.resizeTo(614,640);
+  document.getElementById("logo").onclick=home;
   document.getElementById("remove").onclick=remover;
   document.getElementById("copy").onclick=copy;
   document.getElementById("reset").onclick=reset;
   document.getElementById("trans").onclick=trans;
+}
+
+function home() {
+  location.href="../index.html"
 }
 
 function remover() {
@@ -33,41 +38,44 @@ function copy(){
   var target = document.getElementById('output').value;
 
   if (target==="") {
-    // swal("입력된 내용이 없습니다.","","error");
-    alert("입력된 내용이 없습니다", false);
+    alert("입력된 내용이 없습니다.", false);
   } else {
     clip.setAttribute("value", target);
     document.body.appendChild(clip);
     clip.select();
     document.execCommand("copy");
     document.body.removeChild(clip);
-    // swal("복사되었습니다.","","success");
     alert("복사되었습니다.");
   }
 
 }
 
 function trans() {
-  const data = $("form").serialize();
-  $.ajax({
-    type:"POST",
-    url:"../../php/papago_trans.php",
-    data:data,
-    success:function(args){
-      $("#res_papago").html(args);
-    },
-    error:function(e){
-      alert(e.responseText);
-    }
-  });
-  $.ajax({
-    type:"POST",
-    url:"../../php/google_trans.php",
-    data:data,
-    success:function(args){
-      $("#res_google").html(args);
-    }, error:function(e){
-      alert(e.responseText);
-    }
-  });
+  var input = document.getElementById('input');
+  if(input.value==="") {
+    alert("입력된 내용이 없습니다.", false);
+  } else {
+    const data = $("form").serialize();
+    $.ajax({
+      type:"POST",
+      url:"../../php/papago_trans.php",
+      data:data,
+      success:function(args){
+        $("#res_papago").html(args);
+      },
+      error:function(e){
+        alert(e.responseText);
+      }
+    });
+    $.ajax({
+      type:"POST",
+      url:"../../php/google_trans.php",
+      data:data,
+      success:function(args){
+        $("#res_google").html(args);
+      }, error:function(e){
+        alert(e.responseText);
+      }
+    });
+  }
 }

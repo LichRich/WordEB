@@ -1,0 +1,43 @@
+/* 헤더 부분 세팅*********************************/
+header{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #add8e6;
+  animation: fadeIn .5s steps(60, end);
+  z-index: 100;
+}
+#go_voca_intro {
+  opacity: 1;
+  transition: opacity .2s ease-in-out;
+}
+#go_voca_intro:hover {
+  opacity: 0.5;
+}
+
+
+/* 섹션 부분 세팅*********************************/
+.sections {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 10vh;
+  height: 80vh;
+  opacity: 0;
+  animation: fadeIn .5s forwards;
+  animation-delay: .5s;
+}
+#btn_add_voca {
+  margin-top: 2vh;
+  opacity: 1;
+  transition: opacity .2s ease-in-out;
+}
+#btn_add_voca:hover {
+  opacity: 0.5;
+}
