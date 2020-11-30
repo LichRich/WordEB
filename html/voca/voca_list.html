@@ -23,6 +23,8 @@
       </div>
       <div id="div_title">My Vocabularies</div>
       <div id="div_right">
+        <label class="btns" for="load_voca" id="label_load_voca" style="margin-right:1vw;">불러오기</label>
+        <input type="file" id="load_voca" name="load_voca" accept=".txt" multiple>
         <a href="voca_intro.html" style="height:30px;">
           <img id="go_voca_intro" src="q_mark.png" alt="noImage" style="width:30px; height:30px;">
         </a>
@@ -30,8 +32,8 @@
     </header>
 
     <section class="sections">
-      <!-- list 형태로 DB 내의 단어장 목록 불러오기. -->
 
+      <div class="voca_list"></div>
       <a href="vocabulary.html">
         <img id="btn_add_voca" src="plus.png" alt="noImage" style="width:30px; height:30px;">
       </a>

@@ -27,9 +27,10 @@
 
       <section class="sections" id="section1">
         <div class="intro">
-          <p>단어를 추가할 때는 '단어-뜻'의 형식으로 써요!</p>
+          <p>단어를 추가할 때는 '단어:뜻'의 형식으로 써요!</p>
           <p>뜻이 여러개일 때는 ','로 구분!</p>
-          <p>입력예시: Mean-의미하다,평균</p>
+          <p>여러 단어들은 enter키를 이용해 구분해요!</p>
+          <p style="font-size:25px">입력예시<br> Mean:의미하다,평균 <br>Meaning:의미</p>
         </div>
       </section>
       <section class="sections" id="section2">
@@ -58,7 +59,10 @@
 
   <nav>
     <div class="nav_list">
-      vocabularies list
+      <p style="margin: 5px 0;">vocabularies list</p>
+      <label class="btns" for="load_voca" id="label_load_voca">load vocabularies</label>
+      <input type="file" id="load_voca" name="load_voca" accept=".txt" multiple>
+      <div class="voca_list"></div>
     </div>
     <button class="btns" id="go_trans">go to translater</button>
   </nav>

@@ -3,6 +3,11 @@
   font-family: "Ink Free", "-윤고딕320";
   font-size: 30px;
   font-weight: bold;
+  cursor: pointer;
+  transition: opacity .2s ease-in-out;
+}
+#div_title:hover {
+  opacity:0.5;
 }
 
 /* 섹션 부분 세팅*********************************/
@@ -26,7 +31,15 @@
   border: none;
 }
 #add_voca {
-  margin-top: 3vh;
+  /* margin-top: 3vh; */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 .right {
   margin-left: 1vw;

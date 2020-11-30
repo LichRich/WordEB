@@ -17,6 +17,32 @@ header{
 #go_voca_intro:hover {
   opacity: 0.5;
 }
+#label_load_voca {
+  padding: 5px 20px;
+  border-radius: 20px;
+  border: 2px solid #4c8bf5;
+  background-color: #4c8bf5;
+  width: auto;
+  color: white;
+  font: bold 20px "Ink Free", "-윤고딕320";
+  cursor: pointer;
+}
+#label_load_voca:hover {
+  background-color: white;
+  border: 2px solid white;
+  color: #4c8bf5;
+  transition: background .3s ease, color .3s ease, border-color .3s ease;
+}
+#load_voca {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
 
 
 /* 섹션 부분 세팅*********************************/
@@ -32,6 +58,22 @@ header{
   opacity: 0;
   animation: fadeIn .5s forwards;
   animation-delay: .5s;
+}
+.sections li {
+  list-style: none;
+  padding: 3vh 10vw;
+  border: 2px solid #4c8bf5;
+  background-color: #4c8bf5;
+  font: bold 20px "Ink Free", "-윤고딕320";
+  color: white;
+  margin-bottom: 3vh;
+  cursor: pointer;
+}
+.sections li:hover {
+  background-color: white;
+  border: 2px solid white;
+  color: #4c8bf5;
+  transition: background .3s ease, color .3s ease, border-color .3s ease;
 }
 #btn_add_voca {
   margin-top: 2vh;

@@ -188,6 +188,42 @@ nav {
   flex: 1;
   font: bold 20px "Ink Free", "-윤고딕320";
 }
+#label_load_voca {
+  display: inline-block;
+  margin: 0;
+  padding: 5px 0;
+  width: 100%;
+  border-radius: 0;
+}
+#load_voca {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+.voca_list ul {
+  margin: 1vh 0;
+  list-style: none;
+  padding: 0;
+}
+.voca_list ul li {
+  border: 2px solid #add8e6;
+  background-color: #add8e6;
+  color: white;
+  margin-bottom: 1vh;
+  cursor: pointer;
+}
+
+.voca_list ul li:hover {
+  background-color: white;
+  border: 2px solid white;
+  color: #add8e6;
+  transition: background .3s ease, color .3s ease, border-color .3s ease;
+}
 #go_trans {
   border-radius: 0;
 }
