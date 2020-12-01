@@ -17,30 +17,34 @@
 
   <div class="container">
 
-    <header>
-      <div id="div_logo">
-        <img src="../../logo.png" alt="noLogo" id="logo">
-      </div>
-      <div id="div_title">My Vocabularies</div>
-      <div id="div_right">
-        <label class="btns" for="load_voca" id="label_load_voca" style="margin-right:1vw;">불러오기</label>
-        <input type="file" id="load_voca" name="load_voca" accept=".txt" multiple>
-        <a href="voca_intro.html" style="height:30px;">
-          <img id="go_voca_intro" src="q_mark.png" alt="noImage" style="width:30px; height:30px;">
+    <form method="post">
+
+      <header>
+        <div id="div_logo">
+          <img src="../../logo.png" alt="noLogo" id="logo">
+        </div>
+        <div id="div_title">My Vocabularies</div>
+        <div id="div_right">
+          <label class="btns" for="load_voca" id="label_load_voca" style="margin-right:1vw;">불러오기</label>
+          <input type="file" id="load_voca" name="load_voca" accept=".txt" multiple>
+          <a href="voca_intro.html" style="height:30px;">
+            <img id="go_voca_intro" src="q_mark.png" alt="noImage" style="width:30px; height:30px;" title="설명보기">
+          </a>
+        </div>
+      </header>
+
+      <section class="sections">
+
+        <div class="voca_list"></div>
+        <a href="vocabulary.html">
+          <img id="btn_add_voca" src="plus.png" alt="noImage" style="width:30px; height:30px;" title="새 단어장 추가">
         </a>
-      </div>
-    </header>
 
-    <section class="sections">
+      </section>
 
-      <div class="voca_list"></div>
-      <a href="vocabulary.html">
-        <img id="btn_add_voca" src="plus.png" alt="noImage" style="width:30px; height:30px;">
-      </a>
+      <footer><div class="footer_go" id="test_all">종합 테스트</div></footer>
 
-    </section>
-
-    <footer><div class="footer_go" id="test_all">종합 테스트</div></footer>
+    </form>
 
   </div>
 

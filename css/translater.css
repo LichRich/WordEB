@@ -179,7 +179,7 @@ textarea {
 
 #input,.btn,#output,#res_papago, #res_google {
   resize:none;
-  font-family: "Ink Free", "-윤고딕320";
+  font-family: "-윤고딕320";
 }
 
 ::placeholder{

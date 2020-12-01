@@ -21,6 +21,11 @@ function showTextFile() {
       const name = document.createElement('div');
       var str_name = `${file.name}`;
       name.textContent = str_name.slice(0,-4);
+      if(!location.hash) {
+        location.hash = name.textContent;
+      } else {
+        location.hash += '&'+name.textContent;
+      }
       const textContents = document.createElement('div');
       listItem.appendChild(name);
     } else {

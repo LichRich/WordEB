@@ -246,7 +246,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  weight: 100%;
+  width: 100%;
   height: 10vh;
   color: white;
   font: normal normal 25px "-윤고딕320";

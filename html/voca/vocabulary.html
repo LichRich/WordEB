@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../../css/common.css">
   <link rel="stylesheet" href="../../css/vocabulary.css">
-  <title>단어장 이름</title>
+  <title>Vocabulary</title>
   <style>
     body {
       background-color: #89FF82;
@@ -17,37 +17,43 @@
 
   <div class="container">
 
-    <header>
-      <div id="div_logo">
-        <img src="../../logo.png" alt="noLogo" id="logo">
-      </div>
-      <div id="div_title">Back to Vocabularies</div>
-      <div id="div_right"></div>
-    </header>
+    <form action="../../php/voca_test.php" method="post" onsubmit="return isWordBlank();">
 
-    <section id="section_vocabulary" class="sections">
-      <div class="left">
-        <textarea id="txt_newVoca" name="new_voca" rows="8"  style="resize:none;"></textarea>
-        <br><br>
-        <label class="btns" for="add_voca" id="label_add_voca">새 단어 추가</label>
-        <input type="file" id="add_voca" name="add_voca">
-      </div>
-      <div class="right">
-        <ul>
-          <li>
-            <table>
+      <header>
+        <div id="div_logo">
+          <img src="../../logo.png" alt="noLogo" id="logo">
+        </div>
+        <div id="div_title">Back to Vocabularies</div>
+        <div id="div_right"></div>
+      </header>
+
+      <section id="section_vocabulary" class="sections">
+        <div class="left">
+          <textarea id="txt_newVoca" rows="8"  style="resize:none;"></textarea>
+          <div class="voca_buttons">
+            <button type="button" class="btns" id="add_voca" onclick="registerWords()">새 단어 추가</button>
+          </div>
+        </div>
+        <div class="right">
+          <div class="box_wordList">
+            <table id="word_list">
               <tr>
                 <th>단어</th>
                 <th>의미</th>
               </tr>
             </table>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <footer>
-      <div class="footer_go" id="test">TEST</div>
-    </footer>
+          </div>
+          <div class="voca_buttons">
+            <button type="button" class="btns" id="save_voca" onclick="saveAsFile()">단어장 저장</button>
+          </div>
+        </div>
+      </section>
+      <footer>
+        <button class="btns footer_go" id="test" type="submit">TEST</button>
+      </footer>
+
+    </form>
+
 
   </div>
 
