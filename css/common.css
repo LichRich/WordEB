@@ -211,7 +211,7 @@ nav {
   padding: 0;
 }
 .voca_list ul li {
-  border: 2px solid #add8e6;
+  border-width: 0;
   background-color: #add8e6;
   color: white;
   margin-bottom: 1vh;
@@ -219,10 +219,9 @@ nav {
 }
 
 .voca_list ul li:hover {
-  background-color: white;
-  border: 2px solid white;
+  border-width: 0;
   color: #add8e6;
-  transition: background .3s ease, color .3s ease, border-color .3s ease;
+  transition: background .3s ease, color .3s ease;
 }
 #go_trans {
   border-radius: 0;

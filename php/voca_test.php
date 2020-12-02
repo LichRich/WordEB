@@ -2,6 +2,9 @@
 $questions = $_POST['q'];
 $answers = $_POST['a'];
 
+$q_len = count($questions);
+$a_len = count($answers);
+
  ?>
 
 <!DOCTYPE html>
@@ -32,7 +35,7 @@ $answers = $_POST['a'];
     </header>
 
     <section class="sections">
-      <div class="question"></div>
+      <div class="question" id="question"></div>
       <div class="answer">
         <input type="text" id="txt_answer" name="txt_answer">
         <div id="div_right"></div>
@@ -42,7 +45,61 @@ $answers = $_POST['a'];
     <footer><div class="footer_go" id="go_voca">나가기</div></footer>
   </div>
 
-  <script src="../../js/voca_test.js"></script>
+  <script src="../js/voca_test.js"></script>
+  <script>
+    var questions = <?php echo json_encode($questions) ?>;
+    var len = <?=$q_len?>;
+    var answers = <?php echo json_encode($answers) ?>;
+    var used = [];
+    var point = 100;
+    var num = randomNum();
+
+    for(var i = 0 ; i < len ; i++) {
+      used[i] = false;
+    }
+
+    function init(q, a) {
+      questions.push(q);
+      answers.push(a);
+    }
+
+    function randomNum() {
+      var random = Math.floor(Math.random() * questions.length);
+      return random;
+    }
+    function makeQ() {
+      var div_q = document.getElementById('question');
+      while(used[num]){
+        num = randomNum();
+      }
+      div_q.innerHTML = questions[num];
+    }
+    function checkAnswer(answer) {
+      used[num] = true;
+      var wrong_alert = questions[num]+":"+answers[num];
+      if(answer !== "" && answers[num].indexOf(answer) !== -1) {
+        alert("정답입니다!");
+      } else {
+        point -= 100/questions.length;
+        alert("틀렸습니다. " + wrong_alert);
+      }
+      if(used.includes(false)) {
+        makeQ();
+      } else {
+        questionEnd();
+      }
+    }
+    function questionEnd() {
+      alert("테스트 종료. 점수: " + point + "점");
+      history.back();
+    }
+    window.onload = makeQ();
+    var btn_next = document.getElementById('answer_check');
+    var answer = document.getElementById('txt_answer').value;
+    btn_next.onclick = function() {
+      checkAnswer(answer);
+    }
+  </script>
 
 </body>
 </html>

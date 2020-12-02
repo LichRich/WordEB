@@ -5,7 +5,7 @@
  */
 var logo = document.getElementById('logo');
 logo.onclick = function() {
-    location.href = "../index.html";
+    location.href = "../html/index.html";
 }
 
 
@@ -16,5 +16,5 @@ logo.onclick = function() {
  */
 var go_voca = document.getElementById('go_voca');
 go_voca.onclick = function() {
-    location.href = "voca_list.html";
+    location.href = "../html/voca_list.html";
 }
