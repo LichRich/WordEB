@@ -39,7 +39,7 @@ $a_len = count($answers);
       <div class="answer">
         <input type="text" id="txt_answer" name="txt_answer">
         <div id="div_right"></div>
-        <button class="btns" type="submit" id="answer_check" name="answer_check">다음</button>
+        <button class="btns" type="submit" id="answer_check" name="answer_check" onclick="checkAnswer()">다음</button>
       </div>
     </section>
     <footer><div class="footer_go" id="go_voca">나가기</div></footer>
@@ -49,6 +49,7 @@ $a_len = count($answers);
   <script>
     var questions = <?php echo json_encode($questions) ?>;
     var len = <?=$q_len?>;
+    console.log(len);
     var answers = <?php echo json_encode($answers) ?>;
     var used = [];
     var point = 100;
@@ -56,11 +57,6 @@ $a_len = count($answers);
 
     for(var i = 0 ; i < len ; i++) {
       used[i] = false;
-    }
-
-    function init(q, a) {
-      questions.push(q);
-      answers.push(a);
     }
 
     function randomNum() {
@@ -74,14 +70,16 @@ $a_len = count($answers);
       }
       div_q.innerHTML = questions[num];
     }
-    function checkAnswer(answer) {
+    function checkAnswer() {
       used[num] = true;
+      var answer = document.getElementById('txt_answer').value;
       var wrong_alert = questions[num]+":"+answers[num];
       if(answer !== "" && answers[num].indexOf(answer) !== -1) {
         alert("정답입니다!");
       } else {
-        point -= 100/questions.length;
-        alert("틀렸습니다. " + wrong_alert);
+        point -= Math.floor(100/questions.length);
+        alert("틀렸습니다. " + wrong_alert + " ");
+        console.log("입력값: " + answer);
       }
       if(used.includes(false)) {
         makeQ();
@@ -96,9 +94,6 @@ $a_len = count($answers);
     window.onload = makeQ();
     var btn_next = document.getElementById('answer_check');
     var answer = document.getElementById('txt_answer').value;
-    btn_next.onclick = function() {
-      checkAnswer(answer);
-    }
   </script>
 
 </body>

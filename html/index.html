@@ -27,7 +27,7 @@
         <div class="intro" id="intro1">
           <p>환영합니다!</p>
           <p>간단하게 사용법을 알아볼까요?</p>
-          <button class="btns" id="skip">skip!</button>
+          <button type="button" class="btns" id="skip">skip!</button>
         </div>
       </section>
       <section class="sections" id="section2">
@@ -41,8 +41,8 @@
         <div class="intro">
           <p>이제, 본격적으로 사용방법을 알아볼까요?</p>
           <div class="section3_btns">
-            <button class="btns" id="go_voca_intro">단어장 설명보기</button>
-            <button class="btns" id="go_trans_intro">번역기 설명보기</button>
+            <button type="button" class="btns" id="go_voca_intro">단어장 설명보기</button>
+            <button type="button" class="btns" id="go_trans_intro">번역기 설명보기</button>
           </div>
         </div>
       </section>
@@ -57,8 +57,10 @@
     <div class="nav_list">
       <p style="margin: 5px 0;">vocabularies list</p>
       <label class="btns" for="load_voca" id="label_load_voca">load vocabularies</label>
-      <input type="file" id="load_voca" name="load_voca" accept=".txt" multiple>
-      <div class="voca_list"></div>
+      <input type="file" id="load_voca" accept=".txt" multiple>
+      <form action="voca/vocabulary.php" method="post">
+        <div class="voca_list"></div>
+      </form>
     </div>
     <button class="btns" id="go_trans">go to translater</button>
   </nav>

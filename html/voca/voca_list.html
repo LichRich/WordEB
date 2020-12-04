@@ -17,7 +17,7 @@
 
   <div class="container">
 
-    <form method="post">
+    <form action="vocabulary.php" method="post">
 
       <header>
         <div id="div_logo">
@@ -26,7 +26,7 @@
         <div id="div_title">My Vocabularies</div>
         <div id="div_right">
           <label class="btns" for="load_voca" id="label_load_voca" style="margin-right:1vw;">불러오기</label>
-          <input type="file" id="load_voca" name="load_voca" accept=".txt" multiple>
+          <input type="file" id="load_voca" accept=".txt" multiple>
           <a href="voca_intro.html" style="height:30px;">
             <img id="go_voca_intro" src="q_mark.png" alt="noImage" style="width:30px; height:30px;" title="설명보기">
           </a>
@@ -36,15 +36,23 @@
       <section class="sections">
 
         <div class="voca_list"></div>
-        <a href="vocabulary.html">
+        <a href="vocabulary.php">
           <img id="btn_add_voca" src="plus.png" alt="noImage" style="width:30px; height:30px;" title="새 단어장 추가">
         </a>
 
       </section>
 
-      <footer><div class="footer_go" id="test_all">종합 테스트</div></footer>
+    </form>
+
+
+    <form class="testAllForm" action="../../php/voca_test.php" method="post">
+      
+      <footer>
+        <button type="submit" class="footer_go" id="test_all" style="border-width: 0;" onsubmit="isWordsBlank()">종합 테스트</button>
+      </footer>
 
     </form>
+
 
   </div>
 

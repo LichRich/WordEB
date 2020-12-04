@@ -57,8 +57,10 @@
     <div class="nav_list">
       <p style="margin: 5px 0;">vocabularies list</p>
       <label class="btns" for="load_voca" id="label_load_voca">load vocabularies</label>
-      <input type="file" id="load_voca" name="load_voca" accept=".txt" multiple>
-      <div class="voca_list"></div>
+      <input type="file" id="load_voca" accept=".txt" multiple>
+      <form action="../voca/vocabulary.php" method="post">
+        <div class="voca_list"></div>
+      </form>
     </div>
     <button class="btns" id="go_trans">go to translater</button>
   </nav>

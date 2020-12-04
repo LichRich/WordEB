@@ -9,7 +9,7 @@ logo.onclick = function() {
 }
 var back = document.getElementById('div_title');
 back.onclick = function() {
-    history.back();
+    location.href = "../../html/voca/voca_list.html";
 }
 
 /*
@@ -17,9 +17,10 @@ back.onclick = function() {
  * sections
  *
  */
+ location.hash = 0;
 // 새 단어 등록
 function registerWords() {
-  const form = document.querySelector('form');
+  console.log(Number(location.hash.replace('#', '')));
   const word_list = document.getElementById('word_list');
   var data = document.getElementById("txt_newVoca").value;
   var data_removeEnter = data.split('\n');
@@ -42,15 +43,20 @@ function registerWords() {
       newWords.appendChild(hiddenword);
       newWords.appendChild(hiddenMean);
       newWords.onclick = function() {
+        if(Number(location.hash.replace('#',''))>0) {
+          location.hash = (Number(location.hash.replace('#','')) - 1);
+        }
         var parent = this.parentElement;
         parent.removeChild(this);
       }
+      location.hash = (Number(location.hash.replace('#','')) + 1);
     }
   }
 }
 // 새 단어 저장
-function saveAsFile() {
-  var filename = "output.txt";
+function saveAsFile(fileName) {
+  location.hash = 0;
+  var filename = fileName+".txt";
   var values = document.querySelectorAll("td");
   var str = "";
   for(var i = 0 ; i < values.length ; i += 2) {

@@ -187,6 +187,10 @@ nav {
 .nav_list {
   flex: 1;
   font: bold 20px "Ink Free", "-윤고딕320";
+  overflow-y: scroll;
+}
+.nav_list::-webkit-scrollbar {
+  display: none;
 }
 #label_load_voca {
   display: inline-block;
@@ -210,7 +214,47 @@ nav {
   list-style: none;
   padding: 0;
 }
-.voca_list ul li {
+.voca_list {
+  width: 100%;
+  height: auto;
+}
+.voca_list li {
+  list-style: none;
+  width: 100%;
+  height: 5vh;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-bottom-width: 0;
+  margin-bottom: 2vh;
+}
+.voca_list li button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border-right-width: 0;
+  border-top-width: 0;
+  border-left-width: 0;
+  border-bottom-width: 0;
+  background-color: #add8e6;
+  color: white;
+  font: bold 20px "Ink Free", "-윤고딕320";
+  height: 100%;
+  cursor: pointer;
+}
+.voca_list li button:hover {
+  background-color: white;
+  color: #add8e6;
+  transition: background .3s ease, color .3s ease;
+}
+
+.voca_list ul li div {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
   border-width: 0;
   background-color: #add8e6;
   color: white;
@@ -218,13 +262,16 @@ nav {
   cursor: pointer;
 }
 
-.voca_list ul li:hover {
+.voca_list ul li div:hover {
   border-width: 0;
   color: #add8e6;
+  background-color: white;
   transition: background .3s ease, color .3s ease;
 }
+
 #go_trans {
   border-radius: 0;
+  z-index: 300;
 }
 
 /* 하단 부분 세팅*********************************/
