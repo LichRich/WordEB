@@ -6,10 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../../css/common.css">
   <link rel="stylesheet" href="../../css/voca_list.css">
-  <title>My Vocabularies</title>
+  <title>WordEB</title>
   <style media="screen">
     body {
-      background-color: #89FF82;
+      background-color: #fff;
     }
   </style>
 </head>
@@ -17,7 +17,7 @@
 
   <div class="container">
 
-    <form action="vocabulary.php" method="post">
+    <form action="../../php/vocabulary.php" method="post" onsubmit="isWordsBlank()">
 
       <header>
         <div id="div_logo">
@@ -36,7 +36,7 @@
       <section class="sections">
 
         <div class="voca_list"></div>
-        <a href="vocabulary.php">
+        <a href="../../php/vocabulary.php">
           <img id="btn_add_voca" src="plus.png" alt="noImage" style="width:30px; height:30px;" title="새 단어장 추가">
         </a>
 
@@ -45,10 +45,10 @@
     </form>
 
 
-    <form class="testAllForm" action="../../php/voca_test.php" method="post">
-      
+    <form class="testAllForm" action="../../php/voca_test.php" method="post" onsubmit="return isWordsBlank();">
+
       <footer>
-        <button type="submit" class="footer_go" id="test_all" style="border-width: 0;" onsubmit="isWordsBlank()">종합 테스트</button>
+        <button type="submit" class="footer_go" id="test_all" style="border-width: 0;">종합 테스트</button>
       </footer>
 
     </form>

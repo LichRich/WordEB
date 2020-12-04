@@ -90,25 +90,25 @@ header{
 #remove:hover{
   color:white;
   background: #FF4848;
-  border-color: #89FF82;
+  border-color: #fff;
   cursor: pointer;
 }
 #copy:hover{
   color:white;
   background: #19ce60;
-  border-color: #89FF82;
+  border-color: #fff;
   cursor: pointer;
 }
 #reset:hover{
   color:white;
   background: #4848FF;
-  border-color: #89FF82;
+  border-color: #fff;
   cursor: pointer;
 }
 #trans:hover{
   color: white;
   background: black;
-  border-color: #89FF82;
+  border-color: #fff;
   cursor: pointer;
 }
 
@@ -184,9 +184,4 @@ textarea {
 
 ::placeholder{
   text-align: center;
-}
-
-/* 내비게이션 세팅*********************************/
-#cb_nav + label {
-  top: 0;
 }

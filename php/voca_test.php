@@ -15,10 +15,10 @@ $a_len = count($answers);
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../css/common.css">
   <link rel="stylesheet" href="../css/voca_test.css">
-  <title>voca_test</title>
+  <title>WordEB</title>
   <style media="screen">
     body {
-      background-color: #89FF82;
+      background-color: #fff;
     }
   </style>
 </head>
@@ -77,7 +77,7 @@ $a_len = count($answers);
       if(answer !== "" && answers[num].indexOf(answer) !== -1) {
         alert("정답입니다!");
       } else {
-        point -= Math.floor(100/questions.length);
+        point -= Math.ceil(100/questions.length);
         alert("틀렸습니다. " + wrong_alert + " ");
         console.log("입력값: " + answer);
       }

@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="../../css/full-page-scroll.css">
   <style media="screen">
     section {
-      background-color: #89FF82;
+      background-color: #fff;
     }
   </style>
-  <title>voca_intro</title>
+  <title>WordEB</title>
 </head>
 <body>
 
@@ -35,8 +35,8 @@
       </section>
       <section class="sections" id="section2">
         <div class="intro">
-          <p>나만의 단어장은 단어장 추가 버튼을 이용해 여러개를 만들 수 있어요!</p>
-          <p>대충 단어장 추가하는 짤</p>
+          <p>나만의 단어장은 <img src="plus.png" alt="noImage" style="position:relative; top:5px; width:30px; height:30px;">을 이용해 여러개를 만들 수 있어요!</p>
+          <p>기존의 단어장은 상단의 '불러오기' 버튼을 이용해서 불러올 수 있어요!</p>
         </div>
       </section>
       <section class="sections" id="section3">
@@ -62,7 +62,7 @@
       <p style="margin: 5px 0;">vocabularies list</p>
       <label class="btns" for="load_voca" id="label_load_voca">load vocabularies</label>
       <input type="file" id="load_voca" accept=".txt" multiple>
-      <form action="vocabulary.php" method="post">
+      <form action="../../php/vocabulary.php" method="post">
         <div class="voca_list"></div>
       </form>
     </div>

@@ -5,11 +5,11 @@
  */
 var logo = document.getElementById('logo');
 logo.onclick = function() {
-    location.href = "../../html/index.html";
+    location.href = "../html/index.html";
 }
 var back = document.getElementById('div_title');
 back.onclick = function() {
-    location.href = "../../html/voca/voca_list.html";
+    location.href = "../html/voca/voca_list.html";
 }
 
 /*
@@ -60,6 +60,7 @@ function saveAsFile(fileName) {
   var values = document.querySelectorAll("td");
   var str = "";
   for(var i = 0 ; i < values.length ; i += 2) {
+    if(values[i].textContent === "") continue;
     str += values[i].textContent + ":";
     if(i+1 === values.length-1) str += values[i+1].textContent;
     else str += values[i+1].textContent + "\n";

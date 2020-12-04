@@ -44,7 +44,7 @@ body, html {
 	position: absolute;
 	width: 8px;
 	height: 8px;
-	background: rgba(255, 255, 255, 0.48);
+	background: rgba(173, 216, 230, 0.48);
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	-ms-border-radius: 10px;
@@ -59,12 +59,12 @@ body, html {
 
 .dots li a.active:before {
 	content: '';
-	background-color: #FFFFFF;
+	background-color: #add8e6;
 	width: 14px;
 	height: 14px;
 	margin-top: -4px;
 	left: 9px;
-	background-color: white;
+	background-color: #add8e6;
 	-webkit-transform: scale(1.0);
 	-moz-transform: scale(1.0);
 	-ms-transform: scale(1.0);

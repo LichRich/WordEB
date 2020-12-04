@@ -43,7 +43,7 @@ go_translation.onclick = function() {
        listItem.setAttribute("style", "display:flex;");
        const name = document.createElement('button');
        name.setAttribute("type", "submit");
-       name.setAttribute("style", "flex:8; height:100%; background-color: #add8e6; color: white; font: bold 20px 'Ink Free', '-윤고딕320'; cursor: pointer;");
+       name.setAttribute("style", "flex:9; height:100%; background-color: #add8e6; color: white; font: bold 20px 'Ink Free', '-윤고딕320'; cursor: pointer;");
        name.textContent = str_name;
        name.onclick = function() {
          console.log(name.textContent + 'clicked!!');
@@ -60,8 +60,8 @@ go_translation.onclick = function() {
        };
        readText(file, str_name);
        const remove = document.createElement('div');
-       remove.setAttribute("style", "flex:2; background-color:#FF4848");
-       remove.textContent = "remove";
+       remove.setAttribute("style", "flex:1; background-color:#FF4848");
+       remove.textContent = "X";
        remove.onclick = function() {
          console.log('removeItem on!!!');
          let key = name.textContent;
@@ -108,7 +108,7 @@ window.onload = function() {
       listItem.setAttribute("style", "display:flex;");
       const name = document.createElement('button');
       name.setAttribute("type", "submit");
-      name.setAttribute("style", "flex:8; height:100%; font: bold 20px 'Ink Free', '-윤고딕320';");
+      name.setAttribute("style", "flex:9; height:100%; font: bold 20px 'Ink Free', '-윤고딕320';");
       name.textContent = key;
       name.onclick = function(){
         console.log(name.textContent + 'clicked!!');
@@ -124,8 +124,8 @@ window.onload = function() {
         name.appendChild(val);
       };
       const remove = document.createElement('div');
-      remove.setAttribute("style", "flex:2; background-color:#FF4848; font: bold 20px 'Ink Free', '-윤고딕320';");
-      remove.textContent = "remove";
+      remove.setAttribute("style", "flex:1; background-color:#FF4848; font: bold 20px 'Ink Free', '-윤고딕320';");
+      remove.textContent = "X";
       listItem.appendChild(name);
       listItem.appendChild(remove);
       remove.onclick = function() {
